@@ -98,7 +98,7 @@ def main():
                     iou_threshold=0.5,
                     confidence_threshold=0.5)
 
-    inputs = tf.keras.Input(tf.float32, [1, 416, 416, 3])
+    inputs = tf.placeholder(tf.float32, [1, 416, 416, 3])
 
     model(inputs, training=False)
 
